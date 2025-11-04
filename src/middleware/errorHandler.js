@@ -1,4 +1,4 @@
-/**
+
  * Custom Error Classes
  */
 class AppError extends Error {
@@ -92,9 +92,8 @@ const notFound = (req, res, next) => {
   next(error);
 };
 
-/**
- * Async error wrapper to catch errors in async route handlers
- */
+
+
 const asyncHandler = (fn) => {
   return (req, res, next) => {
     Promise.resolve(fn(req, res, next)).catch(next);
